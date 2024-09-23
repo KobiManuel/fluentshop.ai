@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Icon.module.scss";
 import { IconProps } from "../types";
-import GoogleColored from "@/public/assets/google-colored.svg";
+import GoogleColored from "@/public/icons/google-colored.svg";
 
 const Icon = ({
   icon,
@@ -15,9 +15,8 @@ const Icon = ({
   activeLinks = true,
 }: IconProps) => {
   const uIcons: Record<string, React.ComponentType<any>> = {
-    googleColored: GoogleColored,
+    "google-colored": GoogleColored,
   };
-
   const isSpinner = icon === "spinner" || icon === "spinner-alt";
   const isGrey = activeLinks !== true;
 

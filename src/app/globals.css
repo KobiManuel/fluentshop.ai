@@ -1,42 +1,158 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Clash Grotesk fonts */
+@font-face {
+  font-family: "ClashGrotesk-Extralight";
+  src: url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Extralight.woff2")
+      format("woff2"),
+    url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Extralight.woff")
+      format("woff"),
+    url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Extralight.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Light";
+  src: url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Light.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Regular";
+  src: url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Medium";
+  src: url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Semibold";
+  src: url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Semibold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashGrotesk-Bold";
+  src: url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* General Sans font */
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@font-face {
+  font-family: "GeneralSans-Extralight";
+  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Extralight.ttf")
+    format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "GeneralSans-ExtralightItalic";
+  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-ExtralightItalic.ttf")
+    format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GeneralSans-Light";
+  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Light.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans-LightItalic";
+  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-LightItalic.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GeneralSans-Regular";
+  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans-Italic";
+  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Italic.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GeneralSans-Medium";
+  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans-MediumItalic";
+  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-MediumItalic.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GeneralSans-Semibold";
+  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Semibold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans-SemiboldItalic";
+  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-SemiboldItalic.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GeneralSans-Bold";
+  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GeneralSans-BoldItalic";
+  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-BoldItalic.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  padding: 0;
+  box-sizing: border-box;
 }

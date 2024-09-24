@@ -1,51 +1,51 @@
 /* Clash Grotesk fonts */
-@font-face {
+.font-face {
   font-family: "ClashGrotesk-Extralight";
-  src: url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Extralight.woff2")
+  src: url("./fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Extralight.woff2")
       format("woff2"),
-    url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Extralight.woff")
+    url("./fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Extralight.woff")
       format("woff"),
-    url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Extralight.ttf")
+    url("./fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Extralight.ttf")
       format("truetype");
   font-weight: 200;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
+.font-face {
   font-family: "ClashGrotesk-Light";
-  src: url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Light.ttf")
+  src: url("./fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Light.ttf")
     format("truetype");
   font-weight: 300;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
+.font-face {
   font-family: "ClashGrotesk-Regular";
-  src: url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Regular.ttf")
+  src: url("./fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Regular.ttf")
     format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
+.font-face {
   font-family: "ClashGrotesk-Medium";
-  src: url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Medium.ttf")
+  src: url("./fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Medium.ttf")
     format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
+.font-face {
   font-family: "ClashGrotesk-Semibold";
-  src: url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Semibold.ttf")
+  src: url("./fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Semibold.ttf")
     format("truetype");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
+.font-face {
   font-family: "ClashGrotesk-Bold";
-  src: url("@/public/assets/fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Bold.ttf")
+  src: url("./fonts/ClashGrotesk_Complete/Fonts/WEB/fonts/ClashGrotesk-Bold.ttf")
     format("truetype");
   font-weight: 700;
   font-display: swap;
@@ -54,97 +54,97 @@
 
 /* General Sans font */
 
-@font-face {
+.font-face {
   font-family: "GeneralSans-Extralight";
-  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Extralight.ttf")
+  src: url("./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Extralight.ttf")
     format("truetype");
   font-weight: 200;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
+.font-face {
   font-family: "GeneralSans-ExtralightItalic";
-  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-ExtralightItalic.ttf")
+  src: url("./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-ExtralightItalic.ttf")
     format("truetype");
   font-weight: 200;
   font-display: swap;
   font-style: italic;
 }
-@font-face {
+.font-face {
   font-family: "GeneralSans-Light";
-  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Light.ttf")
+  src: url("./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Light.ttf")
     format("truetype");
   font-weight: 300;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
+.font-face {
   font-family: "GeneralSans-LightItalic";
-  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-LightItalic.ttf")
+  src: url("./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-LightItalic.ttf")
     format("truetype");
   font-weight: 300;
   font-display: swap;
   font-style: italic;
 }
-@font-face {
+.font-face {
   font-family: "GeneralSans-Regular";
-  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Regular.ttf")
+  src: url("./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Regular.ttf")
     format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
+.font-face {
   font-family: "GeneralSans-Italic";
-  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Italic.ttf")
+  src: url("./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Italic.ttf")
     format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: italic;
 }
-@font-face {
+.font-face {
   font-family: "GeneralSans-Medium";
-  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Medium.ttf")
+  src: url("./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Medium.ttf")
     format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
+.font-face {
   font-family: "GeneralSans-MediumItalic";
-  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-MediumItalic.ttf")
+  src: url("./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-MediumItalic.ttf")
     format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: italic;
 }
-@font-face {
+.font-face {
   font-family: "GeneralSans-Semibold";
-  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Semibold.ttf")
+  src: url("./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Semibold.ttf")
     format("truetype");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
+.font-face {
   font-family: "GeneralSans-SemiboldItalic";
-  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-SemiboldItalic.ttf")
+  src: url("./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-SemiboldItalic.ttf")
     format("truetype");
   font-weight: 600;
   font-display: swap;
   font-style: italic;
 }
-@font-face {
+.font-face {
   font-family: "GeneralSans-Bold";
-  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Bold.ttf")
+  src: url("./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Bold.ttf")
     format("truetype");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
-@font-face {
+.font-face {
   font-family: "GeneralSans-BoldItalic";
-  src: url("@/public/assets/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-BoldItalic.ttf")
+  src: url("./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-BoldItalic.ttf")
     format("truetype");
   font-weight: 700;
   font-display: swap;

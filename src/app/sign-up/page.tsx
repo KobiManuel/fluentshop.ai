@@ -17,12 +17,41 @@ const SignUp = () => {
             <h6>Sign Up</h6>
             <p>Let’s get you set up, fill in your details.</p>
           </header>
-          <div>
+          <div className={styles.inner}>
+            <div className="half-width-container">
+              <TextInput
+                label="First Name"
+                placeholder="Enter your first name"
+                ref={inputRef}
+                required={true}
+              />
+              <TextInput
+                label="Last Name"
+                placeholder="Enter your last name"
+                ref={inputRef}
+                required={true}
+              />
+            </div>
             <TextInput
               label="Email"
-              placeholder="olivia@untitledui.com"
+              placeholder="Enter your email"
               ref={inputRef}
               required={true}
+              type="email"
+            />
+            <TextInput
+              label="Password"
+              placeholder="••••••••••"
+              ref={inputRef}
+              required={true}
+              type="password"
+            />
+            <TextInput
+              label="Confirm Password"
+              placeholder="••••••••••"
+              ref={inputRef}
+              required={true}
+              type="password"
             />
           </div>
         </div>

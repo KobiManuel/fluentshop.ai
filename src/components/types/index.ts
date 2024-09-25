@@ -14,4 +14,5 @@ export interface IconProps {
 export interface ITextInputProps extends React.InputHTMLAttributes<HTMLInputElement>  {
   label?: string;
   placeholder?: string;
+  hint?: string;
 }

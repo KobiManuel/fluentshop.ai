@@ -23,6 +23,13 @@
           color: $light-gray-300;
         }
       }
+      .inner {
+        @extend .flex-column;
+        gap: $size-20;
+        > div:first-child {
+          gap: $size-20;
+        }
+      }
     }
   }
 }

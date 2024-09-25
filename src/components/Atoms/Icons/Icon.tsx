@@ -6,6 +6,9 @@ import GoogleColored from "../../../../public/icons/google-colored.svg";
 import Checkmark from "../../../../public/icons/checkmark.svg";
 import Logo from "../../../../public/icons/fluentshop-ai.svg";
 import Stardust from "../../../../public/icons/stardust.svg";
+import HelpCircle from "../../../../public/icons/help-circle.svg";
+import InfoCircle from "../../../../public/icons/info-circle.svg";
+import Email from "../../../../public/icons/sms.svg";
 
 const Icon = ({
   icon,
@@ -23,6 +26,9 @@ const Icon = ({
     checkmark: Checkmark,
     logo: Logo,
     stardust: Stardust,
+    hint: HelpCircle,
+    email: Email,
+    error: InfoCircle,
   };
   const isSpinner = icon === "spinner" || icon === "spinner-alt";
   const isGrey = activeLinks !== true;

@@ -10,3 +10,8 @@ export interface IconProps {
   cursor?: string;
   activeLinks?: boolean;
 }
+
+export interface ITextInputProps extends React.InputHTMLAttributes<HTMLInputElement>  {
+  label?: string;
+  placeholder?: string;
+}

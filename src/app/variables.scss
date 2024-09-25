@@ -1,6 +1,9 @@
 $black: #111111;
 $white: #fef9ff;
 $light-gray-300: #a4a4a4;
+$light-gray-400: #8d8d8d;
+$dark-gray-300: #313132;
+$error-500: #f04438;
 
 $cg: var(--font-clash-grotesk);
 $gs: var(--font-general-sans);
@@ -61,9 +64,16 @@ $size-46: 46px;
   font-family: $gs;
   font-weight: 400;
   font-size: $size-16;
-  pxline-height: $size-24;
+  line-height: $size-24;
 }
-px
+
+.b3-500 {
+  font-family: $gs;
+  font-weight: 500;
+  font-size: $size-14;
+  line-height: $size-20;
+}
+
 /* General Flex Classes */
 
 /* Horizontal Centering */

@@ -1,0 +1,79 @@
+.button {
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  gap: $size-8;
+
+  &.primaryButton {
+    background-color: $white;
+    color: $black;
+  }
+
+  &.secondaryButton {
+    // background-color: $gray;
+    color: $white;
+  }
+
+  &.tertiaryButton {
+    // background-color: $transparent;
+    // color: $blue;
+  }
+
+  &.primaryButtonDisabled,
+  &.secondaryButtonDisabled,
+  &.tertiaryButtonDisabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  // Sizes
+  &.sm {
+    @extend .b3-600;
+    padding: $size-8 $size-14;
+    height: $size-36;
+    min-height: $size-36;
+  }
+
+  &.md {
+    padding: 10px 16px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  &.lg {
+    padding: 12px 18px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  &.xl {
+    @extend .b2-600;
+    padding: $size-12 $size-20;
+    height: 48px;
+  }
+
+  &.xxl {
+    padding: 16px 22px;
+    height: 52px;
+    font-size: 20px;
+  }
+
+  // Icon handling
+  &.withIcon {
+    display: inline-flex;
+    align-items: center;
+
+    .icon-left {
+      margin-right: 8px;
+    }
+
+    .icon-right {
+      margin-left: 8px;
+    }
+  }
+}

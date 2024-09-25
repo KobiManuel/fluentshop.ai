@@ -1,8 +1,9 @@
 "use client";
 import React, { useRef, useState } from "react";
 import styles from "./page.module.scss";
-import { Icon } from "@/components/Atoms/Atoms";
+import { Button, Icon } from "@/components/Atoms/Atoms";
 import { Checkbox, TextInput } from "@/components/Input/Input";
+import Link from "next/link";
 
 const SignUp = () => {
   const [checked, setChecked] = useState(false);
@@ -62,7 +63,19 @@ const SignUp = () => {
               <Checkbox checked={checked} />
               <p className="b3-500">Keep me signed in</p>
             </span>
+            <div
+              className={`full-width flex-column gap-16 ${styles["btn-container"]}`}
+            >
+              <Button size="xl">Continue</Button>
+              <button className={styles["google-btn"]}>
+                <Icon icon="google-colored" width={24} height={24} />
+                Sign Up with Google
+              </button>
+            </div>
           </div>
+          <p className={styles.question}>
+            Already have an account? <Link href={"/"}> Log in now</Link>{" "}
+          </p>
         </div>
       </div>
       <div></div>

@@ -1,7 +1,11 @@
+"use client";
 import React from "react";
 import styles from "./Icon.module.scss";
-import { IconProps } from "../types";
-import GoogleColored from "@/public/icons/google-colored.svg";
+import { IconProps } from "../../types";
+import GoogleColored from "../../../../public/icons/google-colored.svg";
+import Checkmark from "../../../../public/icons/checkmark.svg";
+import Logo from "../../../../public/icons/fluentshop-ai.svg";
+import Stardust from "../../../../public/icons/stardust.svg";
 
 const Icon = ({
   icon,
@@ -16,6 +20,9 @@ const Icon = ({
 }: IconProps) => {
   const uIcons: Record<string, React.ComponentType<any>> = {
     "google-colored": GoogleColored,
+    checkmark: Checkmark,
+    logo: Logo,
+    stardust: Stardust,
   };
   const isSpinner = icon === "spinner" || icon === "spinner-alt";
   const isGrey = activeLinks !== true;
@@ -28,7 +35,7 @@ const Icon = ({
 
   return (
     <IconComponent
-      className={`${styles["icon"]} space-ui-icon ${styles[color]} ${
+      className={`${styles["icon"]} space-ui-icon ${
         isSpinner ? styles.spinner : ""
       } ${isGrey ? styles.isGrey : ""}`}
       style={{

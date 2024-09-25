@@ -1,0 +1,28 @@
+@import "../variables.scss";
+.signup {
+  > div {
+    width: 50%;
+  }
+  &__left {
+    @extend .flex-column;
+    .logo-container {
+      padding: 24px 40px 24px 40px;
+    }
+    .main {
+      @extend .flex-column;
+      padding: 64px 80px 64px 80px;
+      gap: $size-32;
+      > header {
+        @extend .flex-column;
+        gap: $size-12;
+        > h6 {
+          @extend .text36Line44Semibold;
+        }
+        > p {
+          @extend .b2-400;
+          color: $light-gray-300;
+        }
+      }
+    }
+  }
+}

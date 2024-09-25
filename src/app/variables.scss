@@ -1,8 +1,10 @@
-$bg: #050505;
-$blue: #283849;
-$white: #f9f3ec;
-$gray-4: #bdbdbd;
-$gray-3: #828282;
+$black: #111111;
+$white: #fef9ff;
+$light-gray-300: #a4a4a4;
+
+$cg: var(--font-clash-grotesk);
+$gs: var(--font-general-sans);
+
 $cg-regular: "ClashGrotesk-Regular";
 $cg-bold: "ClashGrotesk-Bold";
 $cg-semibold: "ClashGrotesk-Semibold";
@@ -22,3 +24,184 @@ $cg-extralight: "ClashGrotesk-Extralight";
 $gs-extralight: "GeneralSans-Extralight";
 $gs-italic: "GeneralSans-Italic";
 $gs-semibold: "GeneralSans-Semibold";
+
+$size-4: 4px;
+$size-6: 6px;
+$size-8: 8px;
+$size-10: 10px;
+$size-12: 12px;
+$size-14: 14px;
+$size-16: 16px;
+$size-18: 18px;
+$size-20: 20px;
+$size-22: 22px;
+$size-24: 24px;
+$size-26: 26px;
+$size-28: 28px;
+$size-30: 30px;
+$size-32: 32px;
+$size-34: 34px;
+$size-36: 36px;
+$size-38: 38px;
+$size-40: 40px;
+$size-42: 42px;
+$size-44: 44px;
+$size-46: 46px;
+
+.text36Line44Semibold {
+  font-family: $gs;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  color: $white;
+}
+
+.b2-400 {
+  font-family: $gs;
+  font-weight: 400;
+  font-size: $size-16;
+  pxline-height: $size-24;
+}
+px
+/* General Flex Classes */
+
+/* Horizontal Centering */
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Vertical Centering */
+.flex-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+/* Horizontal & Vertical Centering */
+.flex-center-both {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flex Row (Default) */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Flex Column */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Space Between */
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Space Around */
+.flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Space Evenly */
+.flex-space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Align Items to Start */
+.flex-align-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Align Items to End */
+.flex-align-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Wrap Items */
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* No Wrap */
+.flex-no-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* Full Width Items */
+.flex-full-width {
+  display: flex;
+  flex: 1;
+}
+
+/* Grow Items */
+.flex-grow {
+  display: flex;
+  flex-grow: 1;
+}
+
+/* Align Self */
+.align-self-center {
+  align-self: center;
+}
+
+/* Gap Between Items */
+.flex-gap {
+  display: flex;
+  gap: 1rem; /* Adjust as needed */
+}
+
+/* Justify Flex End */
+.flex-justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Reverse Row */
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Reverse Column */
+.flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* Center with Flex Gap */
+.flex-center-gap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Adjust gap as needed */
+}
+
+/* Specific Flex Variations */
+
+/* Flex Column with Centered Items & Justify Content Center */
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flex Row with Space Between & Align Items Center */
+.flex-row-space-between-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

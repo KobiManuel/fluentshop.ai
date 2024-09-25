@@ -1,7 +1,7 @@
 // IconProps.ts
 export interface IconProps {
   icon: string;
-  color: string;
+  color?: string;
   onClick?: () => void;
   rotation?: string;
   width?: number;

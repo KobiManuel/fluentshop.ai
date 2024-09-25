@@ -1,0 +1,16 @@
+@import "../../../app/variables.scss";
+
+.checkbox {
+  @extend .flex-center-both;
+  width: $size-16;
+  height: $size-16;
+  border-radius: $size-4;
+  border: 1px solid $dark-gray-300;
+  cursor: pointer;
+  background: transparent;
+  box-sizing: border-box;
+  &.checked {
+    background: $white;
+    outline: 4px solid rgba(249, 243, 236, 0.2);
+  }
+}

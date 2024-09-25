@@ -83,6 +83,12 @@ $size-46: 46px;
 
 /* General Flex Classes */
 
+/* Gaps */
+
+.gap-8 {
+  gap: $size-8;
+}
+
 /* Horizontal Centering */
 .flex-center {
   display: flex;

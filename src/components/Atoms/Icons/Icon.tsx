@@ -23,7 +23,7 @@ const Icon = ({
 }: IconProps) => {
   const uIcons: Record<string, React.ComponentType<any>> = {
     "google-colored": GoogleColored,
-    checkmark: Checkmark,
+    tick: Checkmark,
     logo: Logo,
     stardust: Stardust,
     hint: HelpCircle,

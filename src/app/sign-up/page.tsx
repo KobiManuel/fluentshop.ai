@@ -1,10 +1,12 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./page.module.scss";
 import { Icon } from "@/components/Atoms/Atoms";
-import { TextInput } from "@/components/Input/Input";
+import { Checkbox, TextInput } from "@/components/Input/Input";
 
 const SignUp = () => {
+  const [checked, setChecked] = useState(false);
+
   const inputRef = useRef(null);
   return (
     <section className={styles.signup}>
@@ -53,6 +55,13 @@ const SignUp = () => {
               required={true}
               type="password"
             />
+            <span
+              className="flex-center-vertical gap-8 pointer"
+              onClick={() => setChecked(!checked)}
+            >
+              <Checkbox checked={checked} />
+              <p className="b3-500">Keep me signed in</p>
+            </span>
           </div>
         </div>
       </div>

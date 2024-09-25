@@ -16,3 +16,8 @@ export interface ITextInputProps extends React.InputHTMLAttributes<HTMLInputElem
   placeholder?: string;
   hint?: string;
 }
+
+export interface ICheckboxProps {
+  checked?: boolean;
+  onClick?: () => void;
+}

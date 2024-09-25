@@ -7,6 +7,19 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
+  background: $black;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 body {
   background: $black;
   font-family: var(--font-general-sans);
@@ -33,4 +46,9 @@ h3 {
     width: 50%;
     box-sizing: border-box;
   }
+}
+
+.pointer {
+  cursor: pointer;
+  user-select: none;
 }

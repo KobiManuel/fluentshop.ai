@@ -9,6 +9,7 @@ export interface IconProps {
   position?: string;
   cursor?: string;
   activeLinks?: boolean;
+ style?: React.CSSProperties;
 }
 
 export interface ITextInputProps extends React.InputHTMLAttributes<HTMLInputElement>  {

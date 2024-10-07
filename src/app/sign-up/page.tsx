@@ -1,9 +1,12 @@
 "use client";
 import React, { useRef, useState } from "react";
 import styles from "./page.module.scss";
-import { Button, Icon } from "@/components/Atoms/Atoms";
+import { Button, Icon, StardustGlow } from "@/components/Atoms/Atoms";
 import { Checkbox, TextInput } from "@/components/Input/Input";
 import Link from "next/link";
+import floatingImg from "../../../public/images/floating-bg.png";
+
+import Image from "next/image";
 
 const SignUp = () => {
   const [checked, setChecked] = useState(false);
@@ -78,7 +81,30 @@ const SignUp = () => {
           </p>
         </div>
       </div>
-      <div></div>
+      <div className={styles["signup__right"]}>
+        <div className={styles["signup__right-inner"]}>
+          <Image src={floatingImg} alt="/" />
+          <div className={styles["content-blur"]}>
+            <div className={styles["content-blur__inner"]}>
+              <div
+                className="flex-column-center gap-32"
+                style={{ width: "80%" }}
+              >
+                <StardustGlow />
+                <div
+                  className={`${styles["content-details"]} flex-column-center gap-4`}
+                >
+                  <h6>Welcome to fluentshop.ai</h6>
+                  <p>
+                    Ready to create, sell, and grow? Let’s get you started with
+                    Fluent!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

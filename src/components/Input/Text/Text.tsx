@@ -6,12 +6,6 @@ const TextInput = forwardRef<HTMLInputElement, ITextInputProps>(
   ({ label, placeholder, hint, ...restProps }, ref) => {
     const [isFilled, setIsFilled] = useState(false);
 
-    // const isMutableRefObject = (
-    //   ref: React.Ref<HTMLInputElement>
-    // ): ref is React.MutableRefObject<HTMLInputElement | null> => {
-    //   return ref !== null && typeof ref === "object" && "current" in ref;
-    // };
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       setIsFilled(!!e.target.value);
     };
@@ -36,6 +30,7 @@ const TextInput = forwardRef<HTMLInputElement, ITextInputProps>(
             {...restProps}
             onChange={handleChange}
             aria-describedby={"hint"}
+            id="text-input"
           />
           {hint || (restProps.type === "password" && <Icon icon="hint" />)}
         </div>

@@ -1,3 +1,4 @@
 import Icon from "./Icons/Icon";
 import Button from "./Button/Button";
-export { Icon, Button };
+import StardustGlow from "./StardustGlow/StardustGlow";
+export { Icon, Button, StardustGlow };

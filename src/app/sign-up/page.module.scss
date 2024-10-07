@@ -1,5 +1,7 @@
 @import "../variables.scss";
 .signup {
+  @extend .flex-row;
+  overflow-x: hidden;
   > div {
     width: 50%;
   }
@@ -10,7 +12,7 @@
       padding: 24px 40px 24px 40px;
       position: fixed;
       background-color: $black;
-      width: 100%;
+      width: 47%;
       z-index: 100;
     }
     .main {
@@ -65,5 +67,75 @@
         }
       }
     }
+  }
+  &__right {
+    box-shadow: -20px 0 30px rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+
+    &-inner {
+      @extend .flex-center-both;
+      background-color: #f3f3f3;
+      border-top-left-radius: 60px;
+      border-bottom-left-radius: 60px;
+      height: 100%;
+      box-shadow: -20px 0 30px rgba(255, 255, 255, 0.1);
+      position: relative;
+
+      > img {
+        width: 100% !important;
+        height: 70%;
+        object-fit: contain;
+        margin-top: -100px;
+        animation: subtle-wobble 4s ease-in-out infinite;
+        transform-origin: center center;
+      }
+      .content-blur {
+        @extend .flex-center-both;
+        width: 100%;
+        height: 100dvh;
+        max-height: 100dvh;
+        position: absolute;
+        inset: 0;
+        &__inner {
+          @extend .flex-center-both;
+          position: absolute;
+          width: 80%;
+          height: 50dvh;
+          border-radius: 60px;
+          background: rgba(17, 17, 17, 0.6);
+          backdrop-filter: blur(40px);
+          top: 50%;
+          transform: translateY(-50%);
+          .content-details {
+            > h6 {
+              @extend .text36Line44Semibold;
+              text-align: center;
+            }
+            > p {
+              @extend .sh2-400;
+              color: $light-gray-300;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes subtle-wobble {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.2) rotate(-1deg);
+  }
+  50% {
+    transform: scale(0.98) rotate(1deg);
+  }
+  75% {
+    transform: scale(1.2) rotate(-0.5deg);
   }
 }

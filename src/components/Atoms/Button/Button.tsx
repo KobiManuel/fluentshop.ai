@@ -1,24 +1,26 @@
 "use client";
-import { Icon } from "../Atoms";
+import { CSSProperties, ReactNode } from "react";
+import { Icon as DefaultIcon } from "../Atoms"; // Assuming the default Icon component is imported
 import styles from "./Button.module.scss";
+import { IconProps } from "@/components/types";
 
 interface ButtonProps {
   size?: "sm" | "md" | "lg" | "xl" | "xxl";
   mode?: "primary" | "secondary" | "tertiary";
-  icon?: string;
-  iconPosition?: "left" | "right";
-  iconColor?: string;
   disabled?: boolean;
-  children: React.ReactNode;
+  children: ReactNode;
+  width?: number;
+  style?: CSSProperties;
+  className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<ButtonProps> & { Icon: React.FC<IconProps> } = ({
   size = "md",
   mode = "primary",
-  icon = "",
-  iconPosition = "left",
-  iconColor = "#000",
   disabled = false,
+  width,
+  style,
+  className,
   children,
 }) => {
   const getButtonStyle = () => {
@@ -59,19 +61,24 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={
-        icon ? `${getButtonStyle()} ${styles.withIcon}` : getButtonStyle()
-      }
+      className={`${getButtonStyle()} ${className || ""}`.trim()}
       disabled={disabled}
+      style={{ width: `${width}%`, ...style }}
     >
-      {icon && iconPosition === "left" && (
-        <Icon icon={icon} width={16} height={16} color={iconColor} />
-      )}
       {children}
-      {icon && iconPosition === "right" && (
-        <Icon icon={icon} width={16} height={16} color={iconColor} />
-      )}
     </button>
+  );
+};
+Button.Icon = ({
+  icon,
+  color = "#000",
+  width = 16,
+  height = 16,
+}: IconProps) => {
+  return (
+    <>
+      <DefaultIcon icon={icon} width={width} height={height} color={color} />
+    </>
   );
 };
 

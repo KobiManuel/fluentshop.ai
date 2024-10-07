@@ -99,14 +99,17 @@
         inset: 0;
         &__inner {
           @extend .flex-center-both;
+          @extend .flex-column;
           position: absolute;
           width: 80%;
-          height: 50dvh;
+          min-height: 50dvh;
           border-radius: 60px;
           background: rgba(17, 17, 17, 0.6);
           backdrop-filter: blur(40px);
           top: 50%;
           transform: translateY(-50%);
+          padding: 40px 0;
+          gap: 64px;
           .content-details {
             > h6 {
               @extend .text36Line44Semibold;
@@ -114,9 +117,41 @@
             }
             > p {
               @extend .sh2-400;
-              color: $light-gray-300;
+              color: $light-gray-25;
               text-align: center;
             }
+          }
+          .first-btn,
+          .second-btn {
+            justify-content: flex-start;
+
+            width: 35%;
+          }
+
+          .second-btn {
+            background: $light-black;
+            color: $white;
+          }
+          .step-indicator-1,
+          .step-indicator-2 {
+            @extend .flex-center-both;
+            width: $size-24;
+            height: $size-24;
+            min-width: $size-24;
+            min-height: $size-24;
+            border-radius: 50%;
+            color: $white;
+            font-family: $cg;
+            font-weight: 500;
+            font-size: $size-16;
+            line-height: $size-24;
+            margin-right: 4px;
+          }
+          .step-indicator-1 {
+            background-color: $black;
+          }
+          .step-indicator-2 {
+            background-color: $dark-gray-300;
           }
         }
       }

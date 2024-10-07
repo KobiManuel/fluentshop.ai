@@ -1,8 +1,10 @@
 $black: #111111;
 $white: #fef9ff;
+$light-gray-25: #fdfdfd;
 $light-gray-300: #a4a4a4;
 $light-gray-400: #8d8d8d;
 $dark-gray-300: #313132;
+$light-black: #181818;
 $error-500: #f04438;
 
 $cg: var(--font-clash-grotesk);
@@ -58,6 +60,13 @@ $size-46: 46px;
   line-height: 44px;
   letter-spacing: -0.02em;
   color: $white;
+}
+
+.b1-500 {
+  font-family: $gs;
+  font-weight: 500;
+  font-size: $size-18;
+  line-height: $size-28;
 }
 
 .b2-400 {

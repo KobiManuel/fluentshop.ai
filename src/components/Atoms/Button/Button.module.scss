@@ -8,6 +8,7 @@
   border: none;
   outline: none;
   gap: $size-8;
+  text-wrap: nowrap;
 
   &.primaryButton {
     background-color: $white;
@@ -40,9 +41,9 @@
   }
 
   &.md {
-    padding: 10px 16px;
-    height: 40px;
-    font-size: 14px;
+    @extend .b1-500;
+    padding: $size-12 $size-28;
+    height: 52px;
   }
 
   &.lg {

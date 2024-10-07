@@ -101,6 +101,16 @@ const SignUp = () => {
                   </p>
                 </div>
               </div>
+              <div className="flex-column-center full-width gap-12">
+                <Button size="md" className={styles["first-btn"]}>
+                  <span className={styles["step-indicator-1"]}>1</span> Create
+                  an account
+                </Button>
+                <Button size="md" className={styles["second-btn"]}>
+                  <span className={styles["step-indicator-2"]}>2</span> Business
+                  Information
+                </Button>
+              </div>
             </div>
           </div>
         </div>

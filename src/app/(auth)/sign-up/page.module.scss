@@ -1,0 +1,56 @@
+.main {
+  @extend .flex-column;
+  padding: 64px 80px 64px 80px;
+  margin-top: 92px;
+  gap: $size-32;
+  z-index: 50;
+  transition: height 0.7s ease-in-out;
+
+  > header {
+    @extend .flex-column;
+    gap: $size-12;
+    > h6 {
+      @extend .text36Line44Semibold;
+    }
+    > p {
+      @extend .b2-400;
+      color: $light-gray-300;
+    }
+  }
+  .inner {
+    @extend .flex-column;
+    gap: $size-20;
+    transition: height 0.7s ease-in-out;
+
+    > div:first-child {
+      gap: $size-20;
+    }
+  }
+
+  .btn-container {
+    margin-top: $size-4;
+  }
+
+  .google-btn {
+    @extend .flex-center-both;
+    @extend .b2-600;
+    flex: 1;
+    border-radius: 100px;
+    border: 1px solid $dark-gray-300;
+    background: transparent;
+    padding: $size-12 $size-16;
+    color: $white;
+    gap: $size-12;
+  }
+  .question {
+    @extend .b2-400;
+    color: $light-gray-300;
+    text-align: center;
+    > a {
+      @extend .b2-600;
+      text-decoration: none;
+      color: $white;
+      margin-left: 2px;
+    }
+  }
+}

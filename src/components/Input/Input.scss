@@ -19,8 +19,17 @@
       outline: 4px solid rgba(249, 243, 236, 0.2);
     }
 
+    &:focus-within.error {
+      border-color: $error-400 !important;
+      outline: 4px solid rgba(255, 22, 9, 0.2);
+    }
+
     &:not(:focus-within).filled {
       border-color: $light-gray-400 !important;
+    }
+
+    &:not(:focus-within).error {
+      border-color: $error-400 !important;
     }
 
     > input {
@@ -39,6 +48,9 @@
   .hint {
     @extend .b3-400;
     color: $light-gray-400;
+    &.error {
+      color: $error-500;
+    }
   }
 }
 

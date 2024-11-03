@@ -16,6 +16,7 @@ export interface ITextInputProps extends React.InputHTMLAttributes<HTMLInputElem
   label?: string;
   placeholder?: string;
   hint?: string;
+  isError?: boolean;
 }
 
 export interface ICheckboxProps {

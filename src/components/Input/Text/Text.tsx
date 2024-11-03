@@ -1,13 +1,58 @@
-import React, { useState, forwardRef, useEffect } from "react";
+import React, {
+  useState,
+  forwardRef,
+  useImperativeHandle,
+  useRef,
+} from "react";
 import { ITextInputProps } from "@/components/types";
 import { Icon } from "@/components/Atoms/Atoms";
+import { validateEmail } from "@/app/global";
 
-const TextInput = forwardRef<HTMLInputElement, ITextInputProps>(
-  ({ label, placeholder, hint, ...restProps }, ref) => {
+interface ImperativeHandle {
+  getValue: () => string;
+  focus: () => void;
+}
+
+const TextInput = forwardRef<ImperativeHandle, ITextInputProps>(
+  ({ label, placeholder, hint, isError, ...restProps }, ref) => {
     const [isFilled, setIsFilled] = useState(false);
+    const [hasError, setHasError] = useState(false);
+    const inputRef = useRef<HTMLInputElement | null>(null);
+
+    useImperativeHandle(ref, () => ({
+      getValue: () => {
+        return inputRef.current ? inputRef.current.value : "";
+      },
+      focus: () => {
+        if (inputRef.current) {
+          inputRef.current.focus();
+        }
+      },
+    }));
+
+    const validateInput = (value: string) => {
+      if (!value) {
+        setHasError(false);
+        return;
+      }
+
+      if (restProps?.type === "password") {
+        const isValid = value.length >= 8;
+        setHasError(!isValid);
+      } else if (restProps?.type === "email") {
+        const isValid = validateEmail(value);
+        setHasError(!isValid);
+      }
+    };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const value = e.target.value;
       setIsFilled(!!e.target.value);
+      validateInput(value);
+
+      if (restProps.onChange) {
+        restProps.onChange(e);
+      }
     };
 
     return (
@@ -22,26 +67,44 @@ const TextInput = forwardRef<HTMLInputElement, ITextInputProps>(
             {label}
           </label>
         )}
-        <div className={`text-input ${isFilled ? "filled" : ""}`}>
+        <div
+          className={`text-input ${isFilled ? "filled" : ""} ${
+            hasError || isError ? "error" : ""
+          }`}
+        >
           <input
             type={restProps.type}
             placeholder={placeholder}
-            ref={ref}
+            ref={inputRef}
             {...restProps}
             onChange={handleChange}
             aria-describedby={"hint"}
-            id="text-input"
+            id={restProps.id || `text-input-${label}`}
+            aria-invalid={hasError}
           />
-          {hint || (restProps.type === "password" && <Icon icon="hint" />)}
+          {(hasError || isError) &&
+            (restProps.type === "password" ? (
+              <Icon icon="hint" />
+            ) : (
+              <Icon icon="error" />
+            ))}
         </div>
-        {hint ||
-          (restProps.type === "password" && (
-            <span id="hint" className="hint">
-              {restProps.type === "password"
-                ? "Must be at least 8 characters"
-                : hint}
-            </span>
-          ))}
+        {(hasError || isError) && (
+          <span
+            id="hint"
+            className={`hint ${
+              hasError && restProps?.type !== "password" && "error"
+            }`}
+          >
+            {hint
+              ? hint
+              : restProps.type === "password"
+              ? "Must be at least 8 characters"
+              : restProps.type === "email"
+              ? "must be a valid email"
+              : ""}
+          </span>
+        )}
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.scss";
+import StoreProvider from "./StoreProvider";
 
 const generalSans = localFont({
   src: "./fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.woff2",
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${generalSans.variable} ${clashGrotesk.variable}`}>
-        {children}
+        <StoreProvider>{children}</StoreProvider>
       </body>
     </html>
   );

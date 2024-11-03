@@ -4,7 +4,7 @@ import { Icon as DefaultIcon } from "../Atoms"; // Assuming the default Icon com
 import styles from "./Button.module.scss";
 import { IconProps } from "@/components/types";
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "sm" | "md" | "lg" | "xl" | "xxl";
   mode?: "primary" | "secondary" | "tertiary";
   disabled?: boolean;
@@ -22,6 +22,7 @@ const Button: React.FC<ButtonProps> & { Icon: React.FC<IconProps> } = ({
   style,
   className,
   children,
+  ...restProps
 }) => {
   const getButtonStyle = () => {
     if (disabled) {
@@ -64,6 +65,7 @@ const Button: React.FC<ButtonProps> & { Icon: React.FC<IconProps> } = ({
       className={`${getButtonStyle()} ${className || ""}`.trim()}
       disabled={disabled}
       style={{ width: `${width}%`, ...style }}
+      {...restProps}
     >
       {children}
     </button>

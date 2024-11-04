@@ -63,6 +63,9 @@
           &:not(.active-stage) {
             background: $light-black;
             color: $white;
+            > .step-indicator {
+              background-color: $dark-gray-300;
+            }
           }
         }
 
@@ -70,8 +73,7 @@
         //   background: $light-black;
         //   color: $white;
         // }
-        .step-indicator-1,
-        .step-indicator-2 {
+        .step-indicator {
           @extend .flex-center-both;
           width: $size-24;
           height: $size-24;
@@ -84,12 +86,7 @@
           font-size: $size-16;
           line-height: $size-24;
           margin-right: 4px;
-        }
-        .step-indicator-1 {
           background-color: $black;
-        }
-        .step-indicator-2 {
-          background-color: $dark-gray-300;
         }
       }
     }

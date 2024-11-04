@@ -5,13 +5,15 @@ import styles from "./page.module.scss";
 import { Button } from "@/components/Atoms/Atoms";
 import { useRef, useState } from "react";
 import { ImperativeHandle } from "@/components/types";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
+import { updateAuthData } from "@/redux/slices/authSlice";
 
 const VerifyEmail = () => {
   const inputRefs = useRef<(ImperativeHandle | null)[]>([]);
   const [disableButton, setDisableButton] = useState(false);
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const { email_address } = useSelector((state: any) => state.auth.value);
 
@@ -34,6 +36,11 @@ const VerifyEmail = () => {
   const handleSubmit = () => {
     const values = inputRefs.current.map((input) => input?.getValue() || "");
     console.log("OTP Values:", values.join(""));
+    dispatch(
+      updateAuthData({
+        onboarding_stage: 2,
+      })
+    );
   };
 
   const handleChange = (

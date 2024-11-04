@@ -34,7 +34,7 @@ const OnboardingBanner = () => {
                   onboarding_stage === 1 ? styles["active-stage"] : ""
                 }`}
               >
-                <span className={styles["step-indicator-1"]}>
+                <span className={styles["step-indicator"]}>
                   {onboarding_stage !== 1 ? (
                     <Icon icon="tick" color="white" width={12} height={12} />
                   ) : (
@@ -49,7 +49,7 @@ const OnboardingBanner = () => {
                   onboarding_stage === 2 ? styles["active-stage"] : ""
                 }`}
               >
-                <span className={styles["step-indicator-2"]}>
+                <span className={styles["step-indicator"]}>
                   {onboarding_stage === 3 ? (
                     <Icon icon="tick" color="white" width={12} height={12} />
                   ) : (

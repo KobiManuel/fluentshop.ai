@@ -5,10 +5,15 @@ import styles from "./page.module.scss";
 import { Button } from "@/components/Atoms/Atoms";
 import { useRef, useState } from "react";
 import { ImperativeHandle } from "@/components/types";
+import { useSelector } from "react-redux";
+import { useRouter } from "next/navigation";
 
 const VerifyEmail = () => {
   const inputRefs = useRef<(ImperativeHandle | null)[]>([]);
   const [disableButton, setDisableButton] = useState(false);
+  const router = useRouter();
+
+  const { email_address } = useSelector((state: any) => state.auth.value);
 
   const addToRefs = (el: ImperativeHandle | null, index: number) => {
     inputRefs.current[index] = el;
@@ -104,59 +109,64 @@ const VerifyEmail = () => {
     checkIfAllInputsFilled();
   };
 
-  return (
-    <form
-      className={styles.main}
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleSubmit();
-      }}
-    >
-      <header>
-        <h6>Email Verification</h6>
-        <p>Check your email.</p>
-      </header>
-      <div className={styles.inner}>
-        <div className={styles["otp-container"]}>
-          <div className={styles["otp-container__inner"]}>
-            {[0, 1, 2, 3].map((_, index) => (
-              <TextInput
-                key={index}
-                placeholder="0"
-                ref={(el) => addToRefs(el, index)}
-                // ref={(el) => (inputRefs.current[index] = el)}
-                onChange={(e) => handleChange(e, index)}
-                onPaste={(e) => handlePaste(e, index)}
-                onKeyDown={(e) => handleKeyDown(e, index)}
-              />
-            ))}
+  if (!email_address) {
+    router.push("/sign-up");
+  } else
+    return (
+      <form
+        className={styles.main}
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSubmit();
+        }}
+      >
+        <header>
+          <h6>Email Verification</h6>
+          <p>Check your email.</p>
+        </header>
+        <div className={styles.inner}>
+          <div className={styles["otp-container"]}>
+            <div className={styles["otp-container__inner"]}>
+              {[0, 1, 2, 3].map((_, index) => (
+                <TextInput
+                  key={index}
+                  placeholder="0"
+                  ref={(el) => addToRefs(el, index)}
+                  // ref={(el) => (inputRefs.current[index] = el)}
+                  onChange={(e) => handleChange(e, index)}
+                  onPaste={(e) => handlePaste(e, index)}
+                  onKeyDown={(e) => handleKeyDown(e, index)}
+                  type="number"
+                  isError={!disableButton}
+                />
+              ))}
+            </div>
+            <p className={styles.hint}>
+              A code was sent to <span>{email_address}</span>
+            </p>
           </div>
-          <p className={styles.hint}>
-            A code was sent to <span>egwelekennedy@gmail.com</span>
+          <div className="flex-column gap-64">
+            <div className="flex-column gap-16">
+              <Button size="xl" mode="transparent">
+                Change Email
+              </Button>
+              <Button size="xl" disabled={true}>
+                Resend OTP
+              </Button>
+              <span className={styles.timer}>00:59</span>
+            </div>
+            <Button size="xl" type="submit" disabled={!disableButton}>
+              Continue
+            </Button>
+          </div>
+          <p className={styles.prompt}>
+            By clicking “Continue”, you agree to the <br /> <b>Terms of Use</b>{" "}
+            and {""}
+            <b>Privacy Policy.</b>
           </p>
         </div>
-        <div className="flex-column gap-64">
-          <div className="flex-column gap-16">
-            <Button size="xl" mode="transparent">
-              Change Email
-            </Button>
-            <Button size="xl" disabled={true}>
-              Resend OTP
-            </Button>
-            <span className={styles.timer}>00:59</span>
-          </div>
-          <Button size="xl" type="submit" disabled={!disableButton}>
-            Continue
-          </Button>
-        </div>
-        <p className={styles.prompt}>
-          By clicking “Continue”, you agree to the <br /> <b>Terms of Use</b>{" "}
-          and {""}
-          <b>Privacy Policy.</b>
-        </p>
-      </div>
-    </form>
-  );
+      </form>
+    );
 };
 
 export default VerifyEmail;

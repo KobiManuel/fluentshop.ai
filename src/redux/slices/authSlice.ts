@@ -6,6 +6,7 @@ interface ClientData {
   first_name: string;
   last_name: string;
   email_address: string;
+  onboarding_stage: number;
 }
 
 // Define the initial state type
@@ -20,6 +21,7 @@ const sampleClient: AuthState = {
     first_name: "",
     last_name: "",
     email_address: "",
+    onboarding_stage: 1,
   },
 };
 
@@ -29,9 +31,8 @@ export const authSlice = createSlice({
   reducers: {
     updateAuthData: (state, action: PayloadAction<Partial<ClientData>>) => {
       // Using Partial<ClientData> for `action.payload` allows partial updates
-      let keys = Object.keys(action.payload) as (keyof ClientData)[];
-      keys.forEach((key) => {
-        state.value[key] = action.payload[key]!;
+      Object.keys(action.payload).forEach((key) => {
+        (state.value[key as keyof ClientData] as any) = action.payload[key as keyof ClientData]!;
       });
     },
   },

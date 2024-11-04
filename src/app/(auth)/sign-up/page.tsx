@@ -6,6 +6,8 @@ import { Checkbox, TextInput } from "@/components/Input/Input";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ImperativeHandle } from "@/components/types";
+import { useDispatch } from "react-redux";
+import { updateAuthData } from "@/redux/slices/authSlice";
 
 const SignUp = () => {
   const [checked, setChecked] = useState(false);
@@ -13,6 +15,7 @@ const SignUp = () => {
   const [hint, setHint] = useState("");
 
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const passwordRef = useRef<ImperativeHandle>(null);
   const confirmPasswordRef = useRef<ImperativeHandle>(null);
@@ -26,6 +29,11 @@ const SignUp = () => {
     const formValues = Object.fromEntries(formData.entries());
     console.log("Form values:", formValues);
 
+    dispatch(
+      updateAuthData({
+        email_address: formValues.email.toString(),
+      })
+    );
     router.push("/sign-up/verify-email");
   };
 

@@ -4,16 +4,15 @@ import styles from "./page.module.scss";
 import { Button, Icon } from "@/components/Atoms/Atoms";
 import { Checkbox, TextInput } from "@/components/Input/Input";
 import Link from "next/link";
-
-interface ImperativeHandle {
-  getValue: () => string;
-  focus: () => void;
-}
+import { useRouter } from "next/navigation";
+import { ImperativeHandle } from "@/components/types";
 
 const SignUp = () => {
   const [checked, setChecked] = useState(false);
   const [notEqualValues, setNotEqualValues] = useState(false);
   const [hint, setHint] = useState("");
+
+  const router = useRouter();
 
   const passwordRef = useRef<ImperativeHandle>(null);
   const confirmPasswordRef = useRef<ImperativeHandle>(null);
@@ -26,6 +25,8 @@ const SignUp = () => {
     const formData = new FormData(e.currentTarget);
     const formValues = Object.fromEntries(formData.entries());
     console.log("Form values:", formValues);
+
+    router.push("/sign-up/verify-email");
   };
 
   const handleChange = () => {

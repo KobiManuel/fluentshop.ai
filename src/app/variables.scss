@@ -1,6 +1,7 @@
 $black: #111111;
 $white: #fef9ff;
 $light-gray-25: #fdfdfd;
+$light-gray-100: #d2d2d2;
 $light-gray-300: #a4a4a4;
 $light-gray-400: #8d8d8d;
 $dark-gray-300: #313132;
@@ -281,6 +282,10 @@ $size-46: 46px;
 
 .gap-42 {
   gap: 42px;
+}
+
+.gap-64 {
+  gap: 64px;
 }
 
 /* Horizontal Centering */

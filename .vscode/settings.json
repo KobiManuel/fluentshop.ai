@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "New Component",
         "Functionality",
-        "User Interface"
+        "User Interface",
+        "New Page"
     ]
 }

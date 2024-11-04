@@ -1,6 +1,7 @@
 .signup {
   @extend .flex-row;
   overflow-x: hidden;
+  min-height: 100vh;
   > div {
     width: 50%;
   }

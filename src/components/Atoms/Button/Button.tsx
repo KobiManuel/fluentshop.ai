@@ -6,7 +6,7 @@ import { IconProps } from "@/components/types";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "sm" | "md" | "lg" | "xl" | "xxl";
-  mode?: "primary" | "secondary" | "tertiary";
+  mode?: "primary" | "secondary" | "tertiary" | "transparent";
   disabled?: boolean;
   children: ReactNode;
   width?: number;
@@ -54,6 +54,10 @@ const Button: React.FC<ButtonProps> & { Icon: React.FC<IconProps> } = ({
           );
         case "tertiary":
           return [styles.button, styles.tertiaryButton, styles[size]].join(" ");
+        case "transparent":
+          return [styles.button, styles.transparentButton, styles[size]].join(
+            " "
+          );
         default:
           return [styles.button, styles.primaryButton, styles[size]].join(" ");
       }

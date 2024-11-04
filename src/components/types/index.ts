@@ -19,6 +19,12 @@ export interface ITextInputProps extends React.InputHTMLAttributes<HTMLInputElem
   isError?: boolean;
 }
 
+export interface ImperativeHandle {
+  getValue: () => string;
+   setValue: (value: string) => void;
+  focus: () => void;
+}
+
 export interface ICheckboxProps {
   checked?: boolean;
   onClick?: () => void;

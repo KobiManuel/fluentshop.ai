@@ -10,6 +10,7 @@ import { validateEmail } from "@/app/global";
 
 interface ImperativeHandle {
   getValue: () => string;
+  setValue: (value: string) => void;
   focus: () => void;
 }
 
@@ -22,6 +23,13 @@ const TextInput = forwardRef<ImperativeHandle, ITextInputProps>(
     useImperativeHandle(ref, () => ({
       getValue: () => {
         return inputRef.current ? inputRef.current.value : "";
+      },
+      setValue: (value: string) => {
+        if (inputRef.current) {
+          inputRef.current.value = value;
+          setIsFilled(!!value);
+          // validateInput(value);
+        }
       },
       focus: () => {
         if (inputRef.current) {

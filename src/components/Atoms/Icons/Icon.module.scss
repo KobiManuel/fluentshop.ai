@@ -1,0 +1,152 @@
+.icon {
+  transition: all 0.6s ease-in-out;
+  path {
+    transition: all 0.6s ease-in-out;
+  }
+
+  // Spinner class
+  &.spinner {
+    animation: rotate 3s linear infinite;
+    animation-play-state: running;
+  }
+
+  // Color classes
+  &.black {
+    stroke: #111111;
+    path {
+      stroke: #111111;
+    }
+  }
+  &.black-fill {
+    fill: #111111;
+    path {
+      stroke: #111111;
+    }
+  }
+
+  &.white {
+    stroke: #fef9ff;
+    path {
+      stroke: #fef9ff;
+    }
+  }
+  &.white-fill {
+    fill: #fef9ff;
+    path {
+      stroke: #fef9ff;
+    }
+  }
+
+  &.light-gray-25 {
+    stroke: #fdfdfd;
+    path {
+      stroke: #fdfdfd;
+    }
+  }
+  &.light-gray-25-fill {
+    fill: #fdfdfd;
+    path {
+      stroke: #fdfdfd;
+    }
+  }
+
+  &.light-gray-100 {
+    stroke: #d2d2d2;
+    path {
+      stroke: #d2d2d2;
+    }
+  }
+  &.light-gray-100-fill {
+    fill: #d2d2d2;
+    path {
+      stroke: #d2d2d2;
+    }
+  }
+
+  &.light-gray-300 {
+    stroke: #a4a4a4;
+    path {
+      stroke: #a4a4a4;
+    }
+  }
+  &.light-gray-300-fill {
+    fill: #a4a4a4;
+    path {
+      stroke: #a4a4a4;
+    }
+  }
+
+  &.light-gray-400 {
+    stroke: #8d8d8d;
+    path {
+      stroke: #8d8d8d;
+    }
+  }
+  &.light-gray-400-fill {
+    fill: #8d8d8d;
+    path {
+      stroke: #8d8d8d;
+    }
+  }
+
+  &.dark-gray-300 {
+    stroke: #313132;
+    path {
+      stroke: #313132;
+    }
+  }
+  &.dark-gray-300-fill {
+    fill: #313132;
+    path {
+      stroke: #313132;
+    }
+  }
+
+  &.light-black {
+    stroke: #181818;
+    path {
+      stroke: #181818;
+    }
+  }
+  &.light-black-fill {
+    fill: #181818;
+    path {
+      stroke: #181818;
+    }
+  }
+
+  &.error-500 {
+    stroke: #f04438;
+    path {
+      stroke: #f04438;
+    }
+  }
+  &.error-500-fill {
+    fill: #f04438;
+    path {
+      stroke: #f04438;
+    }
+  }
+
+  &.error-400 {
+    stroke: #f97066;
+    path {
+      stroke: #f97066;
+    }
+  }
+  &.error-400-fill {
+    fill: #f97066;
+    path {
+      stroke: #f97066;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

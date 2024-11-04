@@ -14,7 +14,7 @@ import StardustGlow from "../../../../public/icons/stardust-glow1.svg";
 
 const Icon = ({
   icon,
-  color,
+  color = "",
   onClick,
   rotation,
   width = 16,
@@ -46,7 +46,7 @@ const Icon = ({
 
   return (
     <IconComponent
-      className={`${styles["icon"]} space-ui-icon ${
+      className={`${styles["icon"]} space-ui-icon ${styles[color]} ${
         isSpinner ? styles.spinner : ""
       } ${isGrey ? styles.isGrey : ""}`}
       style={{

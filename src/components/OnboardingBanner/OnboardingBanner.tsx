@@ -2,9 +2,12 @@
 import Image from "next/image";
 import styles from "./OnboardingBanner.module.scss";
 import floatingImg from "@/../../public/images/floating-bg.png";
-import { Button, StardustGlow } from "../Atoms/Atoms";
+import { Button, Icon, StardustGlow } from "../Atoms/Atoms";
+import { useSelector } from "react-redux";
 
 const OnboardingBanner = () => {
+  const { onboarding_stage } = useSelector((state: any) => state.auth.value);
+
   return (
     <div className={styles["signup__right"]}>
       <div className={styles["signup__right-inner"]}>
@@ -25,13 +28,35 @@ const OnboardingBanner = () => {
               className="flex-column-center gap-12"
               style={{ width: "fit-content" }}
             >
-              <Button size="md" className={styles["first-btn"]}>
-                <span className={styles["step-indicator-1"]}>1</span> Create an
-                account
+              <Button
+                size="md"
+                className={`${styles["first-btn"]} ${
+                  onboarding_stage === 1 ? styles["active-stage"] : ""
+                }`}
+              >
+                <span className={styles["step-indicator-1"]}>
+                  {onboarding_stage !== 1 ? (
+                    <Icon icon="tick" color="white" width={12} height={12} />
+                  ) : (
+                    1
+                  )}
+                </span>{" "}
+                Create an account
               </Button>
-              <Button size="md" className={styles["second-btn"]}>
-                <span className={styles["step-indicator-2"]}>2</span> Business
-                Information
+              <Button
+                size="md"
+                className={`${styles["second-btn"]} ${
+                  onboarding_stage === 2 ? styles["active-stage"] : ""
+                }`}
+              >
+                <span className={styles["step-indicator-2"]}>
+                  {onboarding_stage === 3 ? (
+                    <Icon icon="tick" color="white" width={12} height={12} />
+                  ) : (
+                    2
+                  )}
+                </span>{" "}
+                Business Information
               </Button>
             </div>
           </div>

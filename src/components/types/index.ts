@@ -40,3 +40,10 @@ export interface ITextAreaProps extends React.InputHTMLAttributes<HTMLTextAreaEl
 export interface IOnboardingBannerProps {
   onboarding_stage: string | number;
 }
+
+export interface ILinkInputProps extends React.InputHTMLAttributes<HTMLInputElement>  {
+  label?: string;
+  placeholder?: string;
+  hint?: string;
+  isError?: boolean;
+}

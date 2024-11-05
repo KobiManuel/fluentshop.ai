@@ -3,6 +3,7 @@ import { Button } from "@/components/Atoms/Atoms";
 import { Checkbox, TextArea, TextInput } from "@/components/Input/Input";
 import React from "react";
 import styles from "./page.module.scss";
+import LinkInput from "@/components/Input/Links/LinkInput";
 
 const BusinessInformation = () => {
   return (
@@ -13,6 +14,12 @@ const BusinessInformation = () => {
       </header>
       <div className={styles.inner}>
         <TextInput
+          label="Brand Name"
+          placeholder="Enter your brand name"
+          required={true}
+          name="brandName"
+        />
+        <LinkInput
           label="Brand Name"
           placeholder="Enter your brand name"
           required={true}

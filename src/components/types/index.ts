@@ -29,3 +29,10 @@ export interface ICheckboxProps {
   checked?: boolean;
   onClick?: () => void;
 }
+
+export interface ITextAreaProps extends React.InputHTMLAttributes<HTMLTextAreaElement>  {
+  label?: string;
+  placeholder?: string;
+  hint?: string;
+  isError?: boolean;
+}

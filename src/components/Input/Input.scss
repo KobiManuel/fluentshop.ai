@@ -54,6 +54,33 @@
         margin: 0;
       }
     }
+
+    //textare
+
+    &.textarea {
+      border-radius: $size-20;
+      min-height: 128px;
+      max-height: 128px;
+
+      &:not(:focus-within):not(.filled) {
+        background-color: rgba(116, 116, 121, 0.05) !important;
+      }
+    }
+
+    > textarea {
+      @extend .b2-400;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $white;
+      flex: 1;
+      resize: none;
+      height: 100%;
+
+      &::placeholder {
+        color: $light-gray-300;
+      }
+    }
   }
   .hint {
     @extend .b3-400;

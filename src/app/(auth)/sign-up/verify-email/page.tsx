@@ -41,6 +41,7 @@ const VerifyEmail = () => {
         onboarding_stage: 2,
       })
     );
+    router.push("/sign-up/business-information");
   };
 
   const handleChange = (

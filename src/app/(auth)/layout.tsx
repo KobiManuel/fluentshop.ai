@@ -3,11 +3,11 @@ import styles from "./layout.module.scss";
 import { Icon } from "@/components/Atoms/Atoms";
 import OnboardingBanner from "@/components/OnboardingBanner/OnboardingBanner";
 
-interface layoutProps {
+interface OnboardingLayoutProps {
   children: ReactNode;
 }
 
-const OnboardingLayout: React.FC<layoutProps> = ({ children }) => {
+const OnboardingLayout: React.FC<OnboardingLayoutProps> = ({ children }) => {
   return (
     <section className={styles.signup}>
       <div className={styles["signup__left"]}>

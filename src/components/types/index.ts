@@ -36,3 +36,7 @@ export interface ITextAreaProps extends React.InputHTMLAttributes<HTMLTextAreaEl
   hint?: string;
   isError?: boolean;
 }
+
+export interface IOnboardingBannerProps {
+  onboarding_stage: string | number;
+}

@@ -69,7 +69,7 @@ const TextArea = forwardRef<ImperativeHandle, ITextAreaProps>(
             className={`input-label ${
               !!restProps.required && "required-label"
             }`}
-            htmlFor="text-input-textarea"
+            htmlFor={restProps.id || `text-input-textarea-${label}`}
           >
             {label}
           </label>
@@ -86,7 +86,7 @@ const TextArea = forwardRef<ImperativeHandle, ITextAreaProps>(
             {...restProps}
             onChange={handleChange}
             aria-describedby={"hint"}
-            id={restProps.id || `text-input-${label}`}
+            id={restProps.id || `text-input-textarea-${label}`}
             aria-invalid={hasError}
           />
         </div>

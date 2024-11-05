@@ -70,7 +70,7 @@ const TextInput = forwardRef<ImperativeHandle, ITextInputProps>(
             className={`input-label ${
               !!restProps.required && "required-label"
             }`}
-            htmlFor="text-input"
+            htmlFor={restProps.id || `text-input-${label}`}
           >
             {label}
           </label>

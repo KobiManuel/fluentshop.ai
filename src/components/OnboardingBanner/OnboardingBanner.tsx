@@ -4,9 +4,11 @@ import styles from "./OnboardingBanner.module.scss";
 import floatingImg from "@/../../public/images/floating-bg.png";
 import { Button, Icon, StardustGlow } from "../Atoms/Atoms";
 import { useSelector } from "react-redux";
+import { useSearchParams } from "next/navigation";
 
 const OnboardingBanner = () => {
-  const { onboarding_stage } = useSelector((state: any) => state.auth.value);
+  const searchParams = useSearchParams();
+  const onboarding_stage = searchParams.get("onboarding_stage") || "1";
 
   return (
     <div className={styles["signup__right"]}>
@@ -31,11 +33,11 @@ const OnboardingBanner = () => {
               <Button
                 size="md"
                 className={`${styles["first-btn"]} ${
-                  onboarding_stage === 1 ? styles["active-stage"] : ""
+                  onboarding_stage === "1" ? styles["active-stage"] : ""
                 }`}
               >
                 <span className={styles["step-indicator"]}>
-                  {onboarding_stage !== 1 ? (
+                  {onboarding_stage !== "1" ? (
                     <Icon icon="tick" color="white" width={12} height={12} />
                   ) : (
                     1
@@ -46,11 +48,11 @@ const OnboardingBanner = () => {
               <Button
                 size="md"
                 className={`${styles["second-btn"]} ${
-                  onboarding_stage === 2 ? styles["active-stage"] : ""
+                  onboarding_stage === "2" ? styles["active-stage"] : ""
                 }`}
               >
                 <span className={styles["step-indicator"]}>
-                  {onboarding_stage === 3 ? (
+                  {onboarding_stage === "3" ? (
                     <Icon icon="tick" color="white" width={12} height={12} />
                   ) : (
                     2

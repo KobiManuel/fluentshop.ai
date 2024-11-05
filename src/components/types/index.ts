@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 // IconProps.ts
 export interface IconProps {
   icon: string;
@@ -42,7 +44,7 @@ export interface IOnboardingBannerProps {
 }
 
 export interface ILinkInputProps extends React.InputHTMLAttributes<HTMLInputElement>  {
-  label?: string;
+  label?: string | ReactNode;
   placeholder?: string;
   hint?: string;
   isError?: boolean;

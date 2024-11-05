@@ -88,7 +88,7 @@ const LinkInput = forwardRef<ImperativeHandle, ILinkInputProps>(
           >
             <input
               type={restProps.type}
-              placeholder={placeholder}
+              placeholder={placeholder || "www.example.com"}
               ref={inputRef}
               {...restProps}
               onChange={handleChange}

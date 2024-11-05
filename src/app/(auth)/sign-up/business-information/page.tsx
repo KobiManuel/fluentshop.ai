@@ -20,9 +20,11 @@ const BusinessInformation = () => {
           name="brandName"
         />
         <LinkInput
-          label="Brand Name"
-          placeholder="Enter your brand name"
-          required={true}
+          label={
+            <>
+              Website URL <span className="light-gray-300">(Optional)</span>
+            </>
+          }
           name="brandName"
         />
         <TextArea label="Description" required={true} />
